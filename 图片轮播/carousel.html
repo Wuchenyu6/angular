@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			padding:  0;
+			margin: 0;
+		}
+		body{
+			background-repeat: no-repeat;
+		}
+		.wrap{
+			width: 1200px;
+			height: 397px;
+			margin: 0px auto;
+			overflow: hidden;
+			position: relative;
+			z-index: 1;
+		}
+		.mm{
+			width: 1000px;
+			height: 60px;
+			background-image: url();
+			background-repeat: no-repeat;
+			margin: 0px auto;
+			z-index: 110;
+			margin-top: 0px;
+			position: relative;
+			top: 326px;
+			left: 0px;
+		}
+		.wrap a{
+			display: none;
+		}
+		.wrap img{
+			position: relative;
+			width: 1200px;
+			height: 397px;
+		}
+		.change{
+			width: 1002px;
+			height: 73px;
+			background: url(imgs/.png);
+			position: absolute;
+			bottom: 0;
+			left: 99px;
+			background: url(imgs/.png);
+		}
+		.change span{
+			display: block;
+			width: 40px;
+			height: 73x;
+			font-size: 30px;
+			text-align: center;
+			line-height: 73px;
+			background:red;
+			float: left;
+			cursor: pointer;
+			color: white;
+			opacity: 0.4;
+		}
+		.change span:hover{
+			opacity: 1;
+		}
+		#next{
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap" style="position: relative;z-index: 1">
+		<a href="#" style="display: block;"><img src="imgs/2015122111165657.jpg"></a>
+		<a href="#"><img src="imgs/20151221111650209.jpg"></a>
+		<a href="#"><img src="imgs/20151221111730654.jpg"></a>
+		<a href="#"><img src="imgs/banner_00.gif"></a>
+		<a href="#"><img src="imgs/banner_01.jpg"></a>
+		<a href="#"><img src="imgs/banner_02.jpg"></a>
+		<a href="#"><img src="imgs/banner_03.jpg"></a>
+		<a href="#"><img src="imgs/banner_04.jpg"></a>
+		<a href="#"><img src="imgs/banner_05.jpg"></a>
+		<div class="change">
+			<span id="prev"></span>
+			<span id="next">></span>
+			<div class="mm"></div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var i=0;
+	var box = document.getElementsByClassName("wrap")[0];
+	var links = box.children;
+	function move(){
+		links[i%9].style.display = 'none';
+		i++;
+		links[i%9].style.display = 'block';
+	}
+	var timer=setInterval(move,2000);
+	box.onmouseover = function(){
+		clearInterval(timer);
+	}
+	box.onmouseout = function(){
+		timer=setInterval(move,2000);
+	}
+	var prev = document.getElementById('prev');
+	var next = document.getElementById('next');
+	prev.onclick=function(){
+		links[i%9].style.display = 'none';
+		i--;
+		if(i<0){
+			i  =  8;
+		}
+		links[i%9].style.display = 'block';
+	}
+	next.onclick=function(){
+		move();
+	}
+</script>
+</html>

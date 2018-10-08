@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: absolute;
+			left: 0;
+		}
+	</style>
+	<script src="animate.js"></script>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		var box=document.getElementById('box');
+		box.onclick=function(){
+			animate(box,{left:500,top:300,opacity:20},function(){
+				console.log("运动完成");
+			});
+			//匀速运动
+			// var timer=setInterval(function(){
+			// 	var now=parseInt(getSytel(box,'left'));
+			// 	if(now==500){
+			// 		clearInterval(timer);
+			// 	}else{
+			// 		box.style.left=now+1+"px";
+			// 	}
+			// },30);
+
+			//变速运动
+			// var timer=setInterval(function(){
+			// 	var now=parseInt(getSytel(box,'left'));
+			// 	var speed =Math.ceil((300-now)/6);
+			// 	if(now==300){
+			// 		clearInterval(timer);
+			// 	}else{
+			// 		box.style.left=now+speed+"px";
+			// 	}
+			// },30);
+
+
+			//反向变速运动
+			// var timer=setInterval(function(){
+			// 	var now=parseInt(getSytel(box,'left'));
+			// 	var speed =(0-now)/6;
+			// 	speed=speed>0?Math.ceil(speed):Math.floor(speed);
+			// 	if(now==0){
+			// 		clearInterval(timer);
+			// 	}else{
+			// 		box.style.left=now+speed+"px";
+			// 	}
+			// },30);
+
+
+
+		}
+		
+	</script>
+</body>
+</html>
