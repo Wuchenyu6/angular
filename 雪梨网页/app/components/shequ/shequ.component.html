@@ -1,0 +1,27 @@
+
+<div class="container">
+  <ul>
+    <li *ngFor="let c of cor;">
+      <div class="left">
+        <img id="one" src="{{c.images}}">
+      </div>
+
+      <div class="right">
+        <h4><img id="two" src="assets/images/file.PNG">{{c.courseName}}</h4><br>
+        <span>{{c.content}}</span>
+      </div>
+      <br>
+
+      <div class="below">
+        <span>阅读{{c.read}}</span>&nbsp;&nbsp;
+        <span>评论{{c.comment}}</span> 
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+<div id="right">
+  haha 
+    <!-- <img id="three" src="assets/images/right.PNG"> -->
+</div>

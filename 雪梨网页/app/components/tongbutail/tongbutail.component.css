@@ -1,0 +1,8 @@
+.list{
+    float: left;
+}
+.list li{
+    float: left;
+    margin: 0 10px;
+    cursor: pointer;
+}

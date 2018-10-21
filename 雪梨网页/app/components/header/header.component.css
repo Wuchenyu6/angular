@@ -1,0 +1,31 @@
+#shou{
+    margin-left: 250px;
+}
+nav{
+    height: 50px;
+    background-color:rgb(234, 238, 238);
+}
+.nav{
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 50px
+}
+.nav li{
+    float: left;
+    margin: 0 20px;
+    cursor: pointer;
+}
+#img{
+    float: left;
+    margin-left: 150px;
+}
+#img1{
+    float: right;
+    margin-right: 150px;
+    margin-top: 10px;
+}
+/* #img2{
+    float: right;
+    margin-right: 40px;
+    margin-top: -25px;
+} */

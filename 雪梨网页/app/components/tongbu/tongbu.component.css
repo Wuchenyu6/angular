@@ -1,0 +1,21 @@
+.container{
+    height: 700px;
+    width: 1000px;
+    margin-left: 200px;
+    margin-top: 30px;
+    /* border: 1px solid #ddd; */
+    border-radius: 5px;
+    
+    font-family: "微软雅黑";
+}
+.container li{
+    border: 1px solid #ddd;
+    width: 230px;
+    float: left;
+    margin-right: 8px;
+    margin-top: 10px;
+}
+.button{
+    color: white;
+    background-color: orangered;
+}
