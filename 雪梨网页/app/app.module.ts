@@ -45,7 +45,7 @@ import { TongbutailComponent } from './components/tongbutail/tongbutail.componen
       {path:'course',component:CourseComponent},
       {path:'shequ',component:ShequComponent},
       {path:'**',component:Child2Component}//通配符，如果上面的组件都匹配不到则匹配这一个，例如404
-        ]),
+      ],{useHash: true} ),
     AppRoutingModule,
     HttpClientModule
   ],

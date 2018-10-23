@@ -1,9 +1,15 @@
+#shequ{
+    /* border: 1px solid rgb(230, 40, 40); */
+    width: 1200px;
+    height: 700px;
+    margin: 30px auto;
+}
 .container{
     border: 1px solid #ddd;
-    margin-left: 150px;
+    margin: 30px auto;
     width: 800px;
     height: 755px;
-    margin-top: 20px;
+    float: left;
 }
 .container li{
     margin-top: 5px;
@@ -17,15 +23,13 @@
     height: 100px;
 }
 .right{
-    margin-top: 20px;;
-    /* border: 1px solid red; */
-    margin-left: 180px;
-    width: 600px;
+    margin: 10px auto;
+    width: 400px;
     height: 120px;
     overflow: hidden;
 }
 .below{
-    margin-left: 650px;
+    float: right;
 }
 #one{
     width: 150px;
@@ -35,6 +39,7 @@
 #right{
     width: 30px;
     height: 30px;
-    float: right;
     border: 1px solid #ddd;
+    float: left;
+    margin: 30px 50px;;
 }

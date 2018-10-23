@@ -1,48 +1,44 @@
+<div id="home">
+  <div class="left">
+    <img src="assets/images/logo.png"> 
+    <br>
+    <span id="name">7班-吴晨雨</span>
+    <br>
+    <span>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粉丝
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关注
+    </span>
+    <div class="mulu">
+      <div><i style="color:darkgrey" class="iconfont">&#xe619;</i><a [routerLink]="['/tongbu']">&nbsp;&nbsp;&nbsp;&nbsp;任务&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
+      <br>
+      <div><i style="color:darkgrey" class="iconfont">&#xeedb;</i><a [routerLink]="['/tongbu']">&nbsp;&nbsp;&nbsp;&nbsp;同步课&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
+      <br>
+      <div><i style="color:darkgrey" class="iconfont">&#xe662;</i><a [routerLink]="['/course']">&nbsp;&nbsp;&nbsp;&nbsp;课程&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
+      <br>
+      <div><i style="color:darkgrey" class="iconfont">&#xe60e;</i><a [routerLink]="">&nbsp;&nbsp;&nbsp;&nbsp;且说&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
+      <br>
+      <div><i style="color:darkgrey" class="iconfont">&#xe6ec;</i><a [routerLink]="">&nbsp;&nbsp;&nbsp;&nbsp;通知&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
+    </div>
+  </div>
 
-<div class="left">
-  <img src="assets/images/logo.png"> 
-  <br>
-  <span id="name">7班-吴晨雨</span>
-  <br>
-  <span>
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粉丝
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关注
-  </span>
-<div class="mulu">
-  <div><a [routerLink]="['/tongbu']">&nbsp;&nbsp;&nbsp;&nbsp;任务&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
-  <br>
-  <div><a [routerLink]="['/tongbu']">&nbsp;&nbsp;&nbsp;&nbsp;同步课&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
-  <br>
-  <div><a [routerLink]="['/course']">&nbsp;&nbsp;&nbsp;&nbsp;课程&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
-  <br>
-  <div><a [routerLink]="">&nbsp;&nbsp;&nbsp;&nbsp;且说&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
-  <br>
-  <div><a [routerLink]="">&nbsp;&nbsp;&nbsp;&nbsp;通知&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
-</div>
-
-</div>
-
-
-
-<div class="right">
-  <div class="head">
-    <ul class="nav">
-      <li><a>未提交&nbsp;0</a></li>
-      <li><a>已完成</a></li>
-      <li><a>已完结</a></li>
-      <li id="r"><img src="assets/images/logo2.PNG"></li>
-    </ul>
+  <div class="right">
+    <div class="head">
+      <ul class="nav">
+        <li><i style="color:black" class="iconfont">&#xeedb;</i><a>未提交&nbsp;0</a></li>
+        <li><i style="color:black" class="iconfont">&#xe61d;</i><a>已完成</a></li>
+        <li><i style="color:black" class="iconfont">&#xe614;</i><a>已完结</a></li>
+        <li id="r"><img src="assets/images/logo2.PNG"></li>
+      </ul>
+    </div>
+    <div class="bellow">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;    
+        <img src="assets/images/logo1.png">
+      <div>您当前的同步课任务已经全部完成~</div>
+    </div>
+    <router-outlet></router-outlet>
   </div>
   
-  <div class="bellow">
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;    
-      <img src="assets/images/logo1.png">
-    <div>您当前的同步课任务已经全部完成~</div>
-  </div>
-
-  <router-outlet></router-outlet>
 </div>
-
