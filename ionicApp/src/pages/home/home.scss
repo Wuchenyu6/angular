@@ -1,0 +1,22 @@
+page-home {
+    text-align: center;
+    ion-navbar{
+        height: 60px;
+    }
+    .sli{
+        height:auto;
+        img{
+            width: 100%;
+        }
+    }
+    ion-scroll{
+        height: 50px;
+        white-space: nowrap;
+        span{
+            line-height: 50px;
+            display: inline-block;
+            width: 80px;
+            text-align: center;
+        }
+    }
+}
