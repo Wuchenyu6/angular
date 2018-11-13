@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+      <input id="search" type="text" value="双12特惠好物超低价">
+   
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+    <img src="../assets/imgs/3商城_01.png">
+    <ul class="navList">
+        <li *ngFor="let item of arr;let idx =index" (click)="isClick(idx)" [class.first]="isActive==idx" >
+            {{arr[idx]}}
+          </li>
+    </ul>
+
+    <div [ngSwitch]="isActive">
+      <div *ngSwitchCase="0">
+        <img src="../assets/imgs/沙发.png">
+        <ul class="goods">
+            <li>
+              <img src="assets/imgs/3商城_02.png" alt="">
+            </li>
+            <li>
+              <img src="assets/imgs/3商城_03.png" alt="">
+            </li>
+            <li>
+              <img src="assets/imgs/3商城_04.png" alt="">
+              <!-- <p>罗德蒙简约植绒布艺沙发</p> -->
+            </li>
+            <li>
+              <img src="assets/imgs/3商城_05.png" alt="">
+            </li>
+        </ul>
+        <img src="../assets/imgs/电视柜.png">
+
+      </div>
+     
+    </div>
+</ion-content>
+

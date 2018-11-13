@@ -1,0 +1,224 @@
+<ion-header no-border>
+  <ion-navbar color="yel">
+    <!-- <button ion-button ion-only end>
+      <ion-icon name="menu"></ion-icon>
+    </button> -->
+    <ion-title><img height="60px" src="../assets/imgs/桔家.png"></ion-title>
+  </ion-navbar>
+</ion-header>
+
+  <!-- paginationType 分页类型: bullets，fraction，progress。默认值：bullets。（除非pager输入设置为true） -->
+  <!-- css工具集  -theme下面
+  sass变量(全局)  -variables.scss
+  slide组件 属性 方法 事件
+  @ViewChild()
+  模板引用变量名 标签上直接写 #变量名 -->
+
+
+
+
+
+<ion-content>
+  <!-- <ion-scroll scrollX="true">
+    <span>推荐</span>
+    <span>家居</span>
+    <span>餐厨</span>
+    <span>床上用品</span>
+  </ion-scroll> -->
+
+  <!-- <ul class="navList">
+    <li (click)="isClick(0)" [class.first]="isActive==0" class="first" >推荐</li>
+    <li (click)="isClick(1)" [class.first]="isActive==1">家居</li>
+    <li (click)="isClick(2)" [class.first]="isActive==2">餐厨</li>
+    <li (click)="isClick(3)" [class.first]="isActive==3">床上用品</li>
+  </ul> -->
+
+  <ul class="navList">
+    <li *ngFor="let item of arr;let idx =index" (click)="isClick(idx)" [class.first]="isActive==idx" >
+      {{arr[idx]}}
+    </li>
+  </ul>
+
+
+  
+  <div [ngSwitch]="isActive">
+      <!-- 推荐页 -->
+    <div *ngSwitchCase="0">
+        <ion-slides pager="true" autoplay="1000" loop="true" class="sli">
+            <ion-slide>
+              <img src="assets/imgs/images/1首页_06.png" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="assets/imgs/images/1首页_06.png" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="assets/imgs/images/1首页_06.png" alt="">
+            </ion-slide>
+          </ion-slides>
+              <img  src="../assets/imgs/热门推荐.png">      
+              <ion-grid>
+                <ion-row>
+                  <ion-col col-6>
+                    <img src="../assets/imgs/1首页_03.png">
+                  </ion-col>
+                  <ion-col col-6>
+                    <img src="../assets/imgs/1首页_05.png">
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-6>
+                    <img src="../assets/imgs/1首页_10.png">
+                  </ion-col>
+                  <ion-col col-6>
+                    <img src="../assets/imgs/1首页_11.png">
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-6>
+                    <img src="../assets/imgs/1首页_03.png">
+                  </ion-col>
+                  <ion-col col-6>
+                    <img src="../assets/imgs/1首页_03.png">
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+    </div>
+
+
+    <!-- 家居页 -->
+    <div *ngSwitchCase="1">
+        <ion-slides pager="true" autoplay="1000" loop="true" class="sli">
+            <ion-slide>
+              <img src="assets/imgs/images/2家居页_02.png" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="assets/imgs/images/2家居页_02.png" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="assets/imgs/images/2家居页_02.png" alt="">
+            </ion-slide>
+          </ion-slides>
+          <!-- <ion-slides class="sli" autoplay="1000" loop="true" pager="true" paginationType="bullets"> -->
+              <!-- paginationType 分页类型: bullets，fraction，progress。默认值：bullets。（除非pager输入设置为true） -->
+            <!-- <ion-slide>
+              <h1><img src="../assets/imgs/images/2家居页_02.png"></h1>
+            </ion-slide> -->
+            <!-- <ion-slide>
+              <img src="../assets/imgs/1首页_05.png">
+            </ion-slide>
+            <ion-slide>
+              <h1><img src="../assets/imgs/1首页_10.png"></h1>
+            </ion-slide>
+              <ion-slide>
+            <h1><img src="../assets/imgs/1首页_11.png"></h1>
+              </ion-slide> -->
+          <!-- </ion-slides>  -->
+          <ion-grid>
+            <ion-row>
+              <ion-col col-4>
+                <img src="../assets/imgs/客厅.png">
+              </ion-col>
+              <ion-col col-4>
+                <img src="../assets/imgs/书房.png">
+              </ion-col>
+              <ion-col col-4>
+                <img src="../assets/imgs/门厅.png">
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <img src="../assets/imgs/桔子家居.png">
+          <ion-grid>
+          <ion-row>
+            <ion-col col-6>
+              <img src="../assets/imgs/欧.png">
+            </ion-col>
+            <ion-col col-6>
+              <img src="../assets/imgs/现.png">
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-6>
+              <img src="../assets/imgs/欧.png">
+            </ion-col>
+            <ion-col col-6>
+              <img src="../assets/imgs/现.png">
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </div>
+
+
+
+    <!-- 餐厨页 -->
+    <div *ngSwitchCase="2">
+      这是餐厨页
+    </div>
+
+
+    
+    <!-- 床上用品页 -->
+    <div *ngSwitchCase="3">
+      这是床上用品页
+    </div>
+  </div>
+  
+  
+  
+  <!-- <ion-slides class="sli" autoplay="1000" loop="true" pager="true" paginationType="bullets">
+    <ion-slide>
+      <h1><img src="../assets/imgs/images/1首页_06.png"></h1>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-img width="331px" height="221px" src="../assets/imgs/images/1首页_06.png"></ion-img>
+  
+  <a #ac></a>
+  
+  <input type="text" #inp>
+  <button ion-button menuToggle>菜单开关</button>
+  <ion-segment [(ngModel)]="icons" color="secondary">
+    <ion-segment-button value="camera">
+      <ion-icon name="camera"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="bookmark">
+        <ion-icon name="bookmark"></ion-icon>
+      </ion-segment-button>
+  </ion-segment>  -->
+
+
+
+  <!-- <button ion-button block (click)='goSub()'>跳转</button> -->
+
+
+
+  <!-- 细节箭头 -->
+  <!-- <ion-item detail-push>
+    Item with Detail Arrow
+  </ion-item> -->
+  <!-- 按钮 -->
+  <!-- <button ion-item (click)="goSub()">
+    Button Item
+  </button>
+  <button ion-item detail-none (click)="buttonClick()">
+    没有细节箭头的按钮
+  </button>
+  <ion-item no-lines>
+    Item with no border
+     没有下面的横线 
+  </ion-item>
+  <ion-item text-wrap>
+    Multiline text that should wrap when it is too long
+    to fit on one line in the item.
+    当多行文字太长而不能放在项目中的一行时应该换行的多行文字。
+  </ion-item>
+  <ion-list>
+    <ion-item *ngFor="let item of items;">
+      {{item}}
+    </ion-item>
+  </ion-list> -->
+<!-- 向下滑动会出加载转圈的图标 -->
+  <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll> -->
+
+</ion-content>
